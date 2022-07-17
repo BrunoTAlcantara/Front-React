@@ -1,6 +1,23 @@
-import { Button, Checkbox, Form, Input,InputNumber } from 'antd';
+import { Button, Form, Input,InputNumber,message } from 'antd';
 import './index.css';
 import {createProduct} from '../../api/create'
+
+
+
+export const error = (res) => {
+
+  if (res===true) {
+
+    message.error('Error');
+  }
+  if (res===false) {
+    
+     message.success('Produto criado com sucesso');
+
+  }
+  
+  
+};
 
 export const FormProduct = () => {
 
@@ -12,9 +29,7 @@ export const FormProduct = () => {
     createProduct(values)
   };
 
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
+  
 
   return (
     <div className="FormFormat">
@@ -29,6 +44,7 @@ export const FormProduct = () => {
           {
             message: 'Coloque uma descrição breve',
             required: true,
+            type:'string',
             min: 0,
             max: 99,
           },
@@ -41,9 +57,10 @@ export const FormProduct = () => {
         label="Unidade de medida"
         rules={[
           {
-            message: 'Coloque uma Unidade de Medida',
+            message: 'Coloque uma Unidade de Medida valida',
             required: true,
-            min: 0,
+            type:'string',
+            min: 2,
             max: 99,
           },
         ]}
@@ -57,8 +74,7 @@ export const FormProduct = () => {
           {
             type: 'number',
             message: 'Coloque um Preço Correto',
-            min: 0,
-            max: 15,
+            
           },
         ]}
       >
@@ -71,8 +87,7 @@ export const FormProduct = () => {
           {
             type: 'number',
             message: 'Coloque um Valor Correto',
-            min: 0,
-            max: 15,
+            
           },
         ]}
       >

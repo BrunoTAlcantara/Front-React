@@ -12,6 +12,7 @@ const [sales,setSales] = useState([])
     })
   },[])
 
+ 
 
   const columns = [
   {

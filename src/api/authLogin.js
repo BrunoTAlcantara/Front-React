@@ -2,6 +2,7 @@
 import {login,logout,loading} from '../store/ducks/auth'
 import {api} from './api'
 import {TokenVerify} from './token'
+import {error} from '../pages/Login/index'
 
 
 
@@ -17,6 +18,8 @@ import {TokenVerify} from './token'
     if (localStorage.getItem('token')===res.data.token) {
       
       dispatch(login(res.data.myUser.name))
+      return 'True'
+     
     }
     else {
       
@@ -24,8 +27,8 @@ import {TokenVerify} from './token'
       dispatch(logout())
     }
   }).catch( res => {
-
-    console.log(res.response)
+    
+    error(true)
   });
   }
 }

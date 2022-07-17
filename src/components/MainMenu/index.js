@@ -1,14 +1,13 @@
-import { UserOutlined } from '@ant-design/icons';
+
 import {ShoppingOutlined , SmileOutlined , SecurityScanOutlined,ShopOutlined   } from '@ant-design/icons';
 import React , { useState} from 'react';
 import { Typography } from 'antd';
-import{Link} from 'react-router-dom'
 import { Layout, Menu } from 'antd';
 import './index.css';
 import {useSelector} from 'react-redux'
 
 
-const baseurl = 'https://front-react-jet.vercel.app'
+const baseurl = 'https://front-react-jet.vercel.app/'
 
 
 

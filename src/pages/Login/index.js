@@ -1,25 +1,39 @@
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Form, Input, message } from 'antd';
 import './index.css';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 import {authLogin} from '../../api/authLogin'
-import { Alert } from 'antd';
 import {useSelector} from 'react-redux'
 
+
+
+
+export const error = (res) => {
+
+  if (res===true) {
+
+    message.error('Usuário e/ou senha inválidos');
+  }
+  
+};
+
+
+
 function Login(){
-  const { isAuthenticated, isLoading,token} = useSelector(state => state.auth)
+
   const dispatch = useDispatch()
   
 
-
-  
   const onFinish = ({user,password}) => {
     dispatch(authLogin({user,password}))
-    console.log(isAuthenticated, isLoading)
+    return console.log (user)
+
+ 
   };
 
-  const onFinishFailed = () => {
-    console.log('DEU ERRADO')
+   const onFinishFailed = (response) => {
+    console.log(response)
+   
   };
 
   return (
@@ -48,7 +62,7 @@ function Login(){
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: 'Insira seu usuario Cadastrado',
           },
         ]}
       >
@@ -61,7 +75,7 @@ function Login(){
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: 'Insira sua senha Cadastrada',
           },
         ]}
       >
@@ -85,11 +99,11 @@ function Login(){
           span: 16,
         }}
       >
-        <Button style={{margin:'20px', background:'gray',border:'none'}} type="primary" htmlType="submit">
+        <Button style={{margin:'20px', background:'gray',border:'none'}} onClick={error} type="primary" htmlType="submit">
           Login
         </Button>
       
-        <Button type="primary" htmlType="button" href='https://front-react-jet.vercel.app/register'>
+        <Button type="primary" onClick={error}  htmlType="button" href='https://front-react-jet.vercel.app/register'>
           Registrar
         </Button>
       </Form.Item>

@@ -1,10 +1,27 @@
-import { Button,  Form, Input,InputNumber,Select } from 'antd';
+import { Button,  Form, Input,InputNumber,Select,message } from 'antd';
 import {useState,useEffect} from 'react';
 
 import {api} from '../../api/api'
 import './index.css';
 import {createSales} from '../../api/create'
 const { Option } = Select;
+
+
+export const error = (res) => {
+
+  if (res===true) {
+
+    message.error('Error');
+  }
+  if (res===false) {
+    
+    message.success('Venda criada com sucesso');
+
+
+  }
+  
+  
+};
 
 export const FormSales = () => {
 
@@ -27,9 +44,6 @@ export const FormSales = () => {
     createSales(values)
   };
 
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
 
   products.map(product => console.log(product.desc))
 
@@ -121,8 +135,7 @@ export const FormSales = () => {
           {
             message: 'Coloque o valor de venda',
             required: true,
-            min: 0,
-            max: 99,
+           
           },
         ]}
       >
@@ -132,14 +145,7 @@ export const FormSales = () => {
       <Form.Item
         name="quant"
         label="Quantidade de vendas "
-        rules={[
-          {
-            type: 'number',
-            message: 'Coloque uma Quantidade Correta',
-            min: 0,
-            max: 15,
-          },
-        ]}
+     
       >
         <InputNumber />
       </Form.Item>

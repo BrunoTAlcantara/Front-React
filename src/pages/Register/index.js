@@ -1,8 +1,25 @@
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Form, Input,message } from 'antd';
 import React from 'react';
-import {useDispatch} from 'react-redux';
-import {authLogin} from '../../api/authLogin'
+
 import {createUser} from '../../api/create'
+
+
+
+ export const error = async (res) => {
+  if (res===true) {
+
+    await message.error('Usuário já existe');
+  }
+  if (res===false) {
+    
+    await message.success('Conta criada com sucesso');
+
+
+  }
+  
+};
+
+
 
 function Register(){
 
@@ -42,7 +59,9 @@ function Register(){
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: 'Seu nome deve ser maior que 3 caracteres',
+            max:50,
+            min: 3
           },
         ]}
       >
@@ -55,7 +74,7 @@ function Register(){
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: 'Insira seu Usuario',
           },
         ]}
       >
@@ -68,7 +87,9 @@ function Register(){
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: 'Insira sua senha deve ser maior que 3 caracteres',
+            max:50,
+            min: 3
           },
         ]}
       >
@@ -92,13 +113,25 @@ function Register(){
           span: 16,
         }}
       >
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" onClick={error} htmlType="submit">
           Criar Conta
         </Button>
-        <Button type="primary" htmlType="button" href='https://front-react-jet.vercel.app/login'>
+        
+      </Form.Item>
+
+      <Form.Item
+        wrapperCol={{
+          offset: 8,
+          span: 16,
+        }}
+      >
+        
+      <Button onClick={Response} type="primary" htmlType="button" href='https://front-react-jet.vercel.app/login'>
           Login
         </Button>
+        
       </Form.Item>
+
     </Form>
     </div>
   );

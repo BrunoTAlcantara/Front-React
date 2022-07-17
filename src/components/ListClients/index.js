@@ -3,13 +3,6 @@ import { api } from "../../api/api";
 import { Tabela } from "../Table";
 
 
-
-
-
-
-
-  
-
 export const ListClients = () => {
    const [clients,setClients] = useState([])
   useEffect(()=>{

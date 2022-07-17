@@ -1,6 +1,22 @@
-import { Button, Form, Input} from 'antd';
+import { Button, Form, Input,message,InputNumber} from 'antd';
 import './index.css';
 import {createClients} from '../../api/create'
+
+
+export const error = (res) => {
+
+  if (res===true) {
+
+    message.error('Cnpj ja existe/invalido');
+  }
+  if (res===false) {
+    
+     message.success(' Cliente criado com sucesso');
+
+  }
+  
+  
+};
 
 export const FormClients = () => {
 
@@ -9,9 +25,7 @@ export const FormClients = () => {
     createClients(values)
   };
 
-  const onFinishFailed = (errorInfo) => {
-    
-  };
+  
 
   return (
     <div className="FormFormat">
@@ -26,7 +40,7 @@ export const FormClients = () => {
           {
             message: 'Coloque uma Razão Social valida',
             required: true,
-            min: 0,
+            min: 5,
             max: 99,
           },
         ]}
@@ -38,14 +52,13 @@ export const FormClients = () => {
         label="Cnpj"
         rules={[
           {
-            message: 'Coloque um Cnpj Valido',
+            message: 'Coloque um Cnpj Valido ',
             required: true,
-            min: 0,
-            max: 99,
+
           },
         ]}
       >
-        <Input />
+       <InputNumber />
       </Form.Item>
       <Form.Item 
         name="ender"
@@ -54,7 +67,8 @@ export const FormClients = () => {
           {
             message: 'Coloque um Endereço Valido',
             required: true,
-            min: 0,
+            type:'string',
+            min: 10,
             max: 99,
           },
         ]}
