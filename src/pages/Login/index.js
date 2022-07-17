@@ -89,7 +89,7 @@ function Login(){
           Login
         </Button>
       
-        <Button type="primary" htmlType="button" href='http://localhost:3000/register'>
+        <Button type="primary" htmlType="button" href='https://front-react-jet.vercel.app/register'>
           Registrar
         </Button>
       </Form.Item>
