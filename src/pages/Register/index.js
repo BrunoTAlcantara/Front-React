@@ -93,9 +93,9 @@ function Register(){
         }}
       >
         <Button type="primary" htmlType="submit">
-          Submit
+          Criar Conta
         </Button>
-        <Button type="primary" htmlType="button" href='http://localhost:3000/login'>
+        <Button type="primary" htmlType="button" href='https://front-react-jet.vercel.app/login'>
           Login
         </Button>
       </Form.Item>
