@@ -41,7 +41,7 @@ function Login(){
       autoComplete="off"
     >
 
-    <Alert  message="Error" type="error" showIcon  onClose={onFinishFailed }/>
+ 
       <Form.Item
         label="Usuario"
         name="user"

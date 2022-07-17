@@ -8,7 +8,7 @@ import './index.css';
 import {useSelector} from 'react-redux'
 
 
-const baseurl = 'http://localhost:3000'
+const baseurl = 'https://front-react-jet.vercel.app'
 
 
 
