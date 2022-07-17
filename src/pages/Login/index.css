@@ -1,0 +1,13 @@
+.template {
+ background-color: aliceblue;
+ 
+  
+  height: 100vh;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+.FormFormat {
+ 
+  display:flex;
+  justify-content: start;
+  max-width: 600px;
+  
+ 
+}
+.Form{
+  
+ font-weight: 600;
+
+}
+.Item{
+  font-size:50px;
+}

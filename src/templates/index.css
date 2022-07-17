@@ -1,0 +1,19 @@
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.site-layout-sub-header-background {
+  background: #fff;
+}
+.layout{
+  height:100vh;
+  
+}
+.site-layout-background {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+ 
