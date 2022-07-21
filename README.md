@@ -4,5 +4,5 @@
 </p>
 
 <p align="center">
-  <img alt="creataccount" src="/UI Design/final.png" width="100%">
+  <img alt="creataccount" src="register.png" width="100%">
 </p>
