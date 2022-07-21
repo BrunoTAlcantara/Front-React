@@ -30,13 +30,21 @@
 # Criação de Vendas
 
 <p align="center">
-  <img alt="creataccount" src="Venda.png" width="100%">
+  <img alt="creataccount" src="venda.png" width="100%">
 </p>
 
 # Listagem
 
 <p align="center">
-  <img alt="creataccount" src="Venda.png" width="100%">
+  <img alt="creataccount" src="listagaem.png" width="100%">
+</p>
+
+<p align="center">
+  <img alt="creataccount" src="listagem3.png" width="100%">
+</p>
+
+<p align="center">
+  <img alt="creataccount" src="listagem2.png" width="100%">
 </p>
 
 
