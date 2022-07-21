@@ -9,9 +9,36 @@
   <img alt="creataccount" src="register.png" width="100%">
 </p>
 
-# Registro de Usuario com criação de Token JWT
+# Login Usuario com vericação Token JWT
 
 <p align="center">
   <img alt="creataccount" src="login.png" width="100%">
 </p>
+
+# Criação de Produtos
+
+<p align="center">
+  <img alt="creataccount" src="cadastro produtos.png" width="100%">
+</p>
+
+# Criação de Clientes
+
+<p align="center">
+  <img alt="creataccount" src="Cadastro Clientes.png" width="100%">
+</p>
+
+# Criação de Vendas
+
+<p align="center">
+  <img alt="creataccount" src="Venda.png" width="100%">
+</p>
+
+# Listagem
+
+<p align="center">
+  <img alt="creataccount" src="Venda.png" width="100%">
+</p>
+
+
+
 
